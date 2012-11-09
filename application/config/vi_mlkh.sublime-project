@@ -1,0 +1,39 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				"._*",
+				"*.bak",
+				"*.ico",
+				"*.sample",
+				"*.swf",
+				"*.tar",
+				"*.tgz",
+				"*.txt",
+				"*.sql",
+				"*.csv"
+			],
+			"folder_exclude_patterns":
+			[
+				"system",
+				"license",
+				"application/cache",
+				"application/core",
+				"application/hooks",
+				// "application/language",
+				"application/logs",
+				"application/errors",
+				// "application/helpers",
+				// "application/libraries",
+				"images",
+				"application/third_party",
+				"css",
+				"js",
+				"database"
+			],
+			"path": "/C/Users/brian/Documents/Sites/mlkh"
+		}
+	]
+}
