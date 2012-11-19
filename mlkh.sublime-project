@@ -25,7 +25,7 @@
 				// "application/language",
 				"application/logs",
 				"application/errors",
-				// "application/helpers",
+				"application/helpers",
 				// "application/libraries",
 				"images",
 				"application/third_party",

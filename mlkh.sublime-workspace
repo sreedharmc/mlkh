@@ -1,0 +1,1353 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"upda",
+				"updateItems"
+			],
+			[
+				"hsi",
+				"histories"
+			],
+			[
+				"cue",
+				"current_cart"
+			],
+			[
+				"curnt",
+				"current_cart"
+			],
+			[
+				"invo",
+				"invoice"
+			],
+			[
+				"Cure",
+				"current_cart"
+			],
+			[
+				"insert",
+				"insertkey"
+			],
+			[
+				"a",
+				"audio	<audio>"
+			],
+			[
+				"new",
+				"new_items"
+			],
+			[
+				"cart",
+				"cart_item"
+			],
+			[
+				"quanti",
+				"quantity_in_stock"
+			],
+			[
+				"trans",
+				"trans_complete"
+			],
+			[
+				"tran",
+				"trans_start"
+			],
+			[
+				"tra",
+				"trans_start"
+			],
+			[
+				"proc",
+				"production"
+			],
+			[
+				"his",
+				"history"
+			],
+			[
+				"hist",
+				"histories"
+			],
+			[
+				"get_in",
+				"get_include_path"
+			],
+			[
+				"ech",
+				"echo"
+			],
+			[
+				"get",
+				"getcwd"
+			],
+			[
+				"echo",
+				"echo	echo \"…\""
+			],
+			[
+				"padding-bn",
+				"padding-bottom	zen:css_properties"
+			],
+			[
+				"rea",
+				"repeat-y"
+			],
+			[
+				"url",
+				"url()"
+			],
+			[
+				"upp",
+				"uppercase"
+			],
+			[
+				"fl",
+				"float"
+			],
+			[
+				"abs",
+				"absolute"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"bac",
+				"bac	CSS background: #fff url('') 0 0 repeat;"
+			],
+			[
+				"textshadodow",
+				"text-shadow	zen:css_properties"
+			],
+			[
+				"moz",
+				"-moz-border-radius	zen:css_properties"
+			],
+			[
+				"ha",
+				"header"
+			],
+			[
+				"sha",
+				"shadow"
+			],
+			[
+				"bg",
+				"background:red"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"hea",
+				"header"
+			],
+			[
+				"con",
+				"container_24"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"css",
+				"cssd	cssd"
+			],
+			[
+				"line",
+				"line-height"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"up",
+				"uppercase"
+			],
+			[
+				"ver",
+				"Arial, Helvetica, sans-serif"
+			],
+			[
+				"family",
+				"font-family	zen:css_properties"
+			],
+			[
+				"ve",
+				"Verdana, Geneva, Arial, Helvetica, sans-serif"
+			],
+			[
+				"fon",
+				"fon	CSS - font: 1em/1.5 sans-serif;"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"rep",
+				"repeat-x"
+			],
+			[
+				"im",
+				"img"
+			],
+			[
+				"ba",
+				"banner"
+			],
+			[
+				"Doc",
+				"Doctor"
+			],
+			[
+				"doc",
+				"doctor"
+			],
+			[
+				"Add",
+				"Address"
+			],
+			[
+				"bread",
+				"breadcrumb"
+			],
+			[
+				"Ro",
+				"Role_id"
+			],
+			[
+				"encr",
+				"encrypt_password_callback"
+			],
+			[
+				"arry",
+				"array"
+			],
+			[
+				"pass",
+				"password"
+			],
+			[
+				"pos",
+				"post_array"
+			],
+			[
+				"pat",
+				"patients"
+			],
+			[
+				"get_role",
+				"get_role_id"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"Rol",
+				"Role_model"
+			],
+			[
+				"arra",
+				"array"
+			],
+			[
+				"ref",
+				"refresh"
+			],
+			[
+				"mod",
+				"model	CI - Base Model"
+			],
+			[
+				"for",
+				"foreach	<?php foreach (…) … <?php endforeach ?>"
+			],
+			[
+				"form_v",
+				"form_validation"
+			],
+			[
+				"mo",
+				"model	CI - Base Model"
+			],
+			[
+				"aut",
+				"authenticator"
+			],
+			[
+				"login",
+				"login_view"
+			],
+			[
+				"logi",
+				"loginfooter"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"mari",
+				"margin"
+			],
+			[
+				"use",
+				"username"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"c_",
+				"c_fname"
+			],
+			[
+				"Pat",
+				"Patients"
+			],
+			[
+				"base",
+				"base_url"
+			],
+			[
+				"bo",
+				"border-color"
+			],
+			[
+				"boot",
+				"bootstrap.min.css"
+			],
+			[
+				"bas",
+				"base_url"
+			],
+			[
+				"ar",
+				"array"
+			],
+			[
+				"jquery",
+				"jquery-1.8.1.min.js"
+			],
+			[
+				"js",
+				"js/"
+			],
+			[
+				"ass",
+				"assets/"
+			],
+			[
+				"loca",
+				"local/IS"
+			],
+			[
+				"say",
+				"says"
+			],
+			[
+				"my",
+				"myCat"
+			],
+			[
+				"c",
+				"create  (function)"
+			],
+			[
+				"thi",
+				"this"
+			],
+			[
+				"m",
+				"myObject"
+			],
+			[
+				"h",
+				"hasNext"
+			],
+			[
+				"inhe",
+				"inheritance"
+			],
+			[
+				"fun",
+				"fun	Function"
+			],
+			[
+				"get_s",
+				"get_stub_club_articles"
+			],
+			[
+				"t_clu",
+				"t_clubarticles"
+			],
+			[
+				"mysqlint",
+				"mysql_insert_id"
+			],
+			[
+				"t_",
+				"t_clubarticles"
+			],
+			[
+				"_po",
+				"_POST"
+			],
+			[
+				"_",
+				"_POST"
+			],
+			[
+				"_se",
+				"_SESSION"
+			],
+			[
+				"btn",
+				"btn_edit_user"
+			],
+			[
+				"art",
+				"articleid"
+			],
+			[
+				"input",
+				"input	input - file"
+			],
+			[
+				"title",
+				"title"
+			],
+			[
+				"Ar",
+				"Article"
+			],
+			[
+				"AR",
+				"Article"
+			],
+			[
+				"if",
+				"if	if …"
+			],
+			[
+				"get_all",
+				"get_all_events_by_clubid"
+			],
+			[
+				"clb",
+				"clubid"
+			],
+			[
+				"clu",
+				"clubid"
+			],
+			[
+				"cid",
+				"clubid"
+			],
+			[
+				"club",
+				"clubid"
+			],
+			[
+				"c_even",
+				"c_event_date"
+			],
+			[
+				"stu",
+				"stub"
+			],
+			[
+				"stub",
+				"stubarticles"
+			],
+			[
+				"get_al",
+				"get_all_clubs"
+			],
+			[
+				"all",
+				"allarticles"
+			],
+			[
+				"Desc",
+				"DESC"
+			],
+			[
+				"De",
+				"DESC"
+			],
+			[
+				"while",
+				"while	while …"
+			],
+			[
+				"vi",
+				"visible"
+			],
+			[
+				"whi",
+				"while	while …"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"er",
+				"error"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "application/models/prescribe_model.php",
+			"settings":
+			{
+				"buffer_size": 5633,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/controllers/prescribe.php",
+			"settings":
+			{
+				"buffer_size": 9705,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/views/prescribe/prescribe_view.php",
+			"settings":
+			{
+				"buffer_size": 7746,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"pack",
+				"Package Control: Disable Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"gitco",
+				"Git: Commit"
+			],
+			[
+				"gitad",
+				"Git: Add..."
+			],
+			[
+				"com",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add..."
+			],
+			[
+				"gits",
+				"Git: Status"
+			],
+			[
+				"col",
+				"Color picker"
+			],
+			[
+				"git st",
+				"Git: Status"
+			],
+			[
+				"c",
+				"Git: Commit"
+			],
+			[
+				"co",
+				"Git: Commit"
+			],
+			[
+				"git",
+				"Git: Diff All"
+			],
+			[
+				"dff",
+				"Git: Diff Staged"
+			],
+			[
+				"sta",
+				"Git: Status"
+			],
+			[
+				"",
+				"Git: Add..."
+			],
+			[
+				"comi",
+				"Git: Commit"
+			],
+			[
+				"stat",
+				"Git: Status"
+			],
+			[
+				"git:add",
+				"Git: Add..."
+			],
+			[
+				"git:",
+				"Git: Graph All"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"git:ad",
+				"Git: Add..."
+			],
+			[
+				"gcom",
+				"Git: Commit"
+			],
+			[
+				"gadd",
+				"Git: Add..."
+			],
+			[
+				"gc",
+				"Git: Commit"
+			],
+			[
+				"ind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"INDEN",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"inds",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"fet",
+				"Fetch"
+			],
+			[
+				"FETCH",
+				"Fetch"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"colo",
+				"Color picker"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"instll",
+				"Package Control: Install Package"
+			],
+			[
+				"INST",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 640.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/brian/Documents/Sites/mlkh/application/views/invoices/register.php",
+		"/C/Users/brian/Documents/Sites/mlkh/application/libraries/Prescribe_lib.php",
+		"/C/Users/brian/Documents/Sites/mlkh/application/controllers/invoices.php",
+		"/C/Users/brian/Documents/Sites/mlkh/application/views/dispense/dispense_view.php",
+		"/C/Users/brian/Documents/Sites/mlkh/index.php",
+		"/C/Users/brian/Documents/Sites/mlkh/application/controllers/dispense.php",
+		"/C/Users/brian/Documents/Sites/mlkh/application/language/english/dispense_lang.php",
+		"/C/Users/brian/Documents/Sites/mlkh/application/libraries/Invoice_lib.php",
+		"/C/Users/brian/Documents/Sites/mlkh/application/models/inventory.php",
+		"/C/Users/brian/Documents/Sites/mlkh/application/language/english/prescription_lang.php",
+		"/C/Users/brian/Documents/Sites/mlkh/mlkh.sublime-project",
+		"/C/Users/brian/Documents/Sites/mlkh/application/models/item.php",
+		"/C/Users/brian/Downloads/mlkh/vi_mlkh (1).sql",
+		"/C/Users/brian/AppData/Local/Google/Chrome/User Data/Default/README",
+		"/C/wamp/www/index.php",
+		"/C/Users/brian/Documents/Sites/mlkh/application/views/prescribe/prescription_view.php",
+		"/C/Users/brian/Documents/Sites/mlkh/application/config/autoload.php",
+		"/C/Users/brian/Documents/Sites/mlkh/application/views/prescription/prescription_view.php",
+		"/C/Users/brian/Documents/Sites/mlkh/application/controllers/dispensing.php",
+		"/C/Users/brian/Documents/Sites/mlkh/vi_mlkh.sublime-project",
+		"/C/Users/brian/Downloads/Compressed/webasyst(contacts-1.0.3.17747,stickies-1.0.0.17745,site-2.0.0.18040)(1.1.0.18166)/wa.php",
+		"/C/Users/brian/Downloads/Compressed/webasyst(contacts-1.0.3.17747,stickies-1.0.0.17745,site-2.0.0.18040)(1.1.0.18166)/install.php",
+		"/C/Users/brian/Downloads/Compressed/webasyst(contacts-1.0.3.17747,stickies-1.0.0.17745,site-2.0.0.18040)(1.1.0.18166)/README",
+		"/C/Users/brian/Documents/Sites/sandbox/myconfig.php",
+		"/C/Users/brian/Documents/Sites/sandbox/test/home.php",
+		"/C/Users/brian/Documents/Sites/sandbox/home.php",
+		"/C/Users/brian/Documents/Sites/sandbox/test/myconfig.php",
+		"/C/Users/brian/Documents/Sites/sandbox/test.php",
+		"/C/Users/brian/AppData/Roaming/Sublime Text 2/Packages/User/console log.sublime-snippet",
+		"/C/Users/brian/AppData/Roaming/Sublime Text 2/Packages/User/cssd.sublime-snippet",
+		"/C/Users/brian/Documents/Sites/warm/css/960_24_col.css",
+		"/C/Users/brian/Downloads/william(1).sql",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/pharmacy.php",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/nurse.php",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/doctor.php",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/lab.php",
+		"/H/mlkh_demo.sql",
+		"/C/Users/brian/Documents/Sites/IS/application/views/admin/home_view.php",
+		"/C/Users/brian/Downloads/t_stocks.sql",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/admission.php",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/people.php",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/triage.php",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/sales.php",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/consultant.php",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/prescribe.php",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/dispense.php",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/xray.php",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/inpatient.php",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/procurement.php",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/accounts.php",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/waivers.php",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/reports.php",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/suppliers.php",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/encounter_reports.php",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/Reports",
+		"/C/Users/brian/Documents/Sites/IS/README.md",
+		"/C/Users/brian/Documents/Sites/IS/application/views/admin/output_view.php",
+		"/C/Users/brian/Documents/Sites/IS/application/config/breadcrumb.php",
+		"/C/Users/brian/Documents/Sites/IS/application/views/layouts/menubar.php",
+		"/C/Users/brian/Documents/Sites/IS/application/views/layouts/header.php",
+		"/C/Users/brian/Documents/Sites/IS/ISProject.sublime-project",
+		"/C/Users/brian/Documents/Sites/IS/application/helpers/breadcrumb_helper.php",
+		"/C/Users/brian/Documents/Sites/IS/application/language/english/breadcrumb_lang.php",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/verifylogin.php",
+		"/C/Users/brian/Documents/Sites/IS/application/models/user.php",
+		"/C/Users/brian/Documents/Sites/IS/application/config/config.php",
+		"/C/Users/brian/Documents/Sites/IS/index.php",
+		"/C/Users/brian/Documents/Sites/IS/application/views/admin/employee_view.php",
+		"/C/Users/brian/Documents/Sites/IS/application/views/admin/patient_view.php",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/authenticator.php",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/patients.php",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/administration.php",
+		"/C/Users/brian/Documents/Sites/IS/application/models/role_model.php",
+		"/C/Users/brian/Documents/Sites/IS/application/views/login_view.php",
+		"/C/Users/brian/Documents/Sites/IS/test.php",
+		"/C/Users/brian/Documents/Sites/IS/application/config/autoload.php",
+		"/C/Users/brian/AppData/Local/Temp/Rar$DI35.048/mlkh_demo.sql",
+		"/C/Users/brian/Documents/Sites/IS/system/core/Common.php",
+		"/C/Users/brian/Documents/Sites/IS/system/core/CodeIgniter.php",
+		"/C/Users/brian/Documents/Sites/IS/system/core/Model.php",
+		"/C/Users/brian/Documents/Sites/IS/application/models/role.php",
+		"/C/wamp/bin/php/php5.3.13/php.ini",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/admin.php",
+		"/C/Users/brian/Documents/Sites/IS/user_guide/index.html",
+		"/C/wamp/bin/php/php5.3.13/php.ini-development",
+		"/C/wamp/bin/apache/apache2.2.22/bin/wampserver.conf",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/login.php",
+		"/C/Users/brian/Documents/Sites/IS/application/config/routes.php",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/Auth.php",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/home.php",
+		"/C/Users/brian/Documents/Sites/IS/application/controllers/examples.php",
+		"/C/Users/brian/Documents/Sites/IS/application/views/alternate_footer.php",
+		"/D/hospital functionality.md",
+		"/C/Users/brian/Documents/Sites/IS/assets/css/style.css",
+		"/C/Users/brian/Documents/Sites/IS/application/views/patient_view.php",
+		"/D/Flash/Gisairo/sms.md",
+		"/D/Flash/Gisairo/9-13-2012.md",
+		"/C/Users/brian/Documents/Sites/IS/application/views/footer.php",
+		"/C/Users/brian/Documents/Sites/IS/application/views/menubar.php",
+		"/C/Users/brian/Documents/Sites/IS/application/views/home_view.php",
+		"/C/Users/brian/Documents/Sites/IS/application/views/template.php",
+		"/C/Users/brian/Documents/Sites/IS/application/views/header.php",
+		"/C/Users/brian/Documents/Sites/IS/application/config/database.php",
+		"/home/brian/web.local/IS/application/views/alternate_footer.php",
+		"/home/brian/web.local/IS/application/views/patient_view.php",
+		"/home/brian/web.local/IS/application/views/header.php",
+		"/home/brian/web.local/IS/application/views/footer.php",
+		"/home/brian/web.local/IS/application/views/menubar.php",
+		"/home/brian/web.local/IS/assets/css/style.css",
+		"/home/brian/web.local/IS/application/views/template.php",
+		"/home/brian/web.local/IS/application/views/login_view.php",
+		"/home/brian/web.local/IS/application/controllers/home.php",
+		"/home/brian/web.local/IS/application/views/example.php",
+		"/home/brian/web.local/IS/application/controllers/examples.php",
+		"/home/brian/web.local/IS/application/controllers/verifylogin.php",
+		"/home/brian/web.local/IS/application/views/home_view.php",
+		"/home/brian/web.local/IS/README.md",
+		"/home/brian/web.local/IS/application/controllers/login.php",
+		"/home/brian/web.local/IS/application/models/patient.php",
+		"/home/brian/web.local/IS/application/models/user.php",
+		"/home/brian/web.local/IS/application/config/database.php",
+		"/home/brian/web.local/IS/ISProject.sublime-project",
+		"/home/brian/web.local/IS/application/config/config.php",
+		"/home/brian/web.local/IS/application/controllers/welcome.php",
+		"/home/brian/web.local/IS/application/views/home.php",
+		"/home/brian/web.local/IS/application/views/welcome_message.php",
+		"/home/brian/web.local/IS/application/config/routes.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"name",
+			"CI",
+			"invoice_time",
+			"cart",
+			"get_amount_due",
+			"{\n",
+			"Admin",
+			"Rout",
+			"feature",
+			"whoweare.gif",
+			"img//",
+			"/img/img",
+			"blogImage1.jpg",
+			"post-Image.jpg",
+			"Age",
+			"?>\n",
+			"date",
+			"h3",
+			"li",
+			"page",
+			"h3",
+			"2MB",
+			"Photo",
+			"article",
+			"assets",
+			"ico",
+			"images",
+			"length",
+			"odd",
+			"prevent"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"whoweare.jpg",
+			"img/",
+			"img/blogImage1.jpg",
+			"/img/blogImage1.jpg",
+			"blogImage1.jpg",
+			"../assets"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "application/models/prescribe_model.php",
+					"settings":
+					{
+						"buffer_size": 5633,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2907,
+								2907
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"is_xml": false,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1158.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "application/controllers/prescribe.php",
+					"settings":
+					{
+						"buffer_size": 9705,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6402,
+								6402
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"is_xml": false,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3135.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "application/views/prescribe/prescribe_view.php",
+					"settings":
+					{
+						"buffer_size": 7746,
+						"regions":
+						{
+							"TagLint":
+							{
+								"flags": 52,
+								"icon": "dot",
+								"regions":
+								[
+									[
+										3409,
+										3416
+									]
+								],
+								"scope": "variable.parameter"
+							}
+						},
+						"selection":
+						[
+							[
+								2074,
+								2074
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"is_xml": false,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1062.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.git":
+	{
+		"height": 118.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 129.0,
+	"status_bar_visible": true
+}

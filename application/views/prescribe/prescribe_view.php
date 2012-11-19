@@ -1,5 +1,5 @@
 <?php $this->load->view("partial/header"); ?>
-<div id="page_title" style="margin-bottom:8px;"><?php echo $this->lang->line('dispensing'); ?></div>
+<div id="page_title" style="margin-bottom:8px;"><?php echo $this->lang->line('prescription'); ?></div>
 <?php
 if(isset($error))
 {
@@ -17,68 +17,87 @@ if (isset($success))
 }
 ?>
 <div id="register_wrapper">
-<table id="register">
+<?php echo form_open("prescribe/select_item",array('id'=>'add_item_form')); ?>
+<?php if (isset($invoice_id)): ?>
+			<?php echo form_hidden('invoice_id', $invoice_id); ?>
+<?php endif ?>
+<label id="item_label" for="item">
+
+<?php
+echo $this->lang->line('invoices_find_or_scan_item');
+?>
+</label>
+<?php echo form_input(array('name'=>'item','id'=>'item','value'=>"".$item['name'].""));?>
+
+</form>
+
+<table >
 <thead>
 <tr>
-	<th style="width:10%;"><?php echo $this->lang->line('prescription_date'); ?></th>
-	<th style="width:10%;"><?php echo $this->lang->line('presctiption_item_name'); ?></th>
-	<th style="width:10%;"><?php echo $this->lang->line('prescription_dosage'); ?></th>
-	<th style="width:10%;"><?php echo $this->lang->line('prescription_route_of_admin'); ?></th>
-	<th style="width:15%;"><?php echo $this->lang->line('prescription_frequency'); ?></th>
-	<th style="width:15%;"><?php echo $this->lang->line('prescription_duration'); ?></th>
-	<th style="width:10%;"><?php echo $this->lang->line('dispensing_category'); ?></th>
-	<th style="width:15%;"><?php echo $this->lang->line('prescription_quantity'); ?></th>
-	<th style="width:15%;"><?php echo $this->lang->line('dispensing_unit_price'); ?></th>
-	<th style="width:15%;"><?php echo $this->lang->line('dispensing_total'); ?></th>
+<th style="width:10%;"><?php echo $this->lang->line('presctiption_item_name'); ?></th>
+<th style="width:10%;"><?php echo $this->lang->line('prescription_number_of_items'); ?></th>
+<th style="width:15%;"><?php echo $this->lang->line('prescription_frequency'); ?></th>
+<th style="width:15%;"><?php echo $this->lang->line('prescription_duration'); ?></th>
+<th style="width:15%;"><?php echo $this->lang->line('prescription_add'); ?></th>
 </tr>
 </thead>
 <tbody>
-	<?php
-if(count($prescriptions)==0)
-{
-?>
-<tr>
-	<td colspan='8'>
-		<div class='warning_message' style='padding:7px;'><?php echo $this->lang->line('no_prescriptions_for_patient'); ?></div>
-	</td>
-</tr>
-<?php
-}
-//else
-{
-?>
-	<?php foreach ($prescriptions as $prescription): ?>
-		<tr>
-			<td><?php echo $prescription->invoice_time; ?></td>
-			<td><?php echo $prescription->item_id; ?></td>
-			<td><?php echo $prescription->dosage; ?></td>
-			<td><?php echo $prescription->route_of_adm; ?></td>
-			<td><?php echo $prescription->frequency; ?></td>
-			<td><?php echo $prescription->duration; ?></td>
-			<td><?php echo 'Category'?></td>
-			<td><?php echo form_input(array('name'=> 'qty', 'value' => $prescription->quantity_purchased, 'size'=>'5')); ?></td>
-			<td><?php echo $prescription->item_unit_price; ?></td>
-			<td><?php echo $prescription->amount; ?></td>
-		</tr>
-	<?php endforeach ?>
-<?php
-}
-?>
+	<tr>
+		<?php echo form_open("prescribe/add",array('id'=>'add_presc_form')); ?>
+		<?php if (isset($invoice_id)): ?>
+			<?php echo form_hidden('invoice_id', $invoice_id); ?>
+		<?php endif ?>
+		<?php echo form_hidden('item_id', $item['item_id']); ?>
+		<td style="align:center;"><?php echo $item['name'];?></td>
+		<td><?php echo form_input(array('name'=>'number','value'=>"",'size'=>'3')); ?></td>
+		<td><?php echo form_dropdown('frequency', $frequency, "1"); ?></td>
+		<td><?php echo form_input(array('name'=>'duration','value'=>"",'size'=>'3')); ?></td>
+		<td><?php echo form_submit('add', $this->lang->line("prescription_add")); ?> </td>
+		</form>
+	</tr>
+
 </tbody>
 </table>
+<br />
+<?php if (isset($customer)): ?>
+	<table id="register">
+	<caption>Patient Prescription</caption>
+	<thead>
+		<th>Date</th>
+		<th>Drug</th>
+		<th>Dosage(ml\tablets)</th>
+		<th>Frequency</th>
+		<th>Duration</th>
+		<th>Delete</th>
+	</thead>
+	<tbody id="cart_contents">
+		<?php if (isset($cart)): ?>
+		<?php //print_r($cart); ?>
+			<?php foreach ($cart as $cart_item): ?>
+			<tr>
+				<td><?php echo $cart_item['time']; ?></td>
+				<td><?php echo $cart_item['name'];?></td>
+				<td><?php echo $cart_item['dosage'];?></td>
+				<td><?php echo $cart_item['frequency']; ?></td>
+				<td><?php echo $cart_item['duration']; ?></td>
+				<td><?php echo anchor("prescribe/delete/".$cart_item['insertkey']."", 'Delete'); ?></td>
+			</tr>
+			<?php endforeach ?>
+		<?php endif ?>
+	</tbody>
+</table>
+<?php endif ?>
 </div>
-
-
 <div id="overall_sale">
 	<?php
 	if(isset($customer))
 	{
 		echo $this->lang->line("invoices_customer").': <b>'.$customer. '</b><br />';
-		echo anchor("dispensing/remove_customer",'['.$this->lang->line('common_remove').' '.$this->lang->line('customers_customer').']');
+		echo anchor("prescribe/remove_customer",'['.$this->lang->line('common_remove').' '.$this->lang->line('customers_customer').']');
 	}
 	else
 	{
-		echo form_open("dispensing/select_customer",array('id'=>'select_customer_form')); ?>
+		echo form_open("prescribe/select_customer",array('id'=>'select_customer_form')); ?>
 		<label id="customer_label" for="customer"><?php echo $this->lang->line('invoices_select_customer'); ?></label>
 		<?php echo form_input(array('name'=>'customer','id'=>'customer','size'=>'30','value'=>$this->lang->line('invoices_start_typing_customer_name')));?>
 		</form>
@@ -87,7 +106,6 @@ if(count($prescriptions)==0)
 		<?php
 	}
 	?>
-
 	<?php if (isset($customer)): ?>
 	<div id='sale_details'>
 		<div class="float_left" style="width:55%;">Gender:</div>
@@ -100,52 +118,19 @@ if(count($prescriptions)==0)
 		<div class="float_left" style="width:45%;font-weight:bold;"><?php echo $civil_status; ?></div>
 	</div>
 	<?php endif ?>
-
-
-
-
-	<?php
-	// Only show this part if there are Items already in the invoice.
-	if(count($cart) > 0)
-	{
-	?>
-
-    	
-		<div class="clearfix" style="margin-bottom:1px;">&nbsp;</div>
-		<?php
-		// Only show this part if there is at least one payment entered.
-		if(isset($customer))
-		{
-		?>
-			<div id="finish_sale">
-				<?php echo form_open("invoices/complete",array('id'=>'finish_invoice_form')); ?>
-				<label id="comment_label" for="comment"><?php echo $this->lang->line('common_comments'); ?>:</label>
-				<?php echo form_textarea(array('name'=>'comment', 'id' => 'comment', 'value'=>$comment,'rows'=>'4','cols'=>'23'));?>
-				<br /><br />
-				
-				<?php
+	<?php if (isset($cart)): ?>
+		<div class="finish_sale">
+			<?php echo form_open("prescribe/complete",array('id'=>'finish_invoice_form')); ?>
+			<?php
 				echo "<div class='small_button' id='finish_sale_button' style='float:left;margin-top:5px;'><span>".$this->lang->line('invoices_complete_invoice')."</span></div>";
 				?>
-			</div>
-			</form>
-        <div id="Cancel_sale">
-		<?php echo form_open("invoices/cancel_invoice",array('id'=>'cancel_sale_form')); ?>
-		<div class='small_button' id='cancel_sale_button' style='margin-top:5px;'>
-			<span><?php echo $this->lang->line('invoices_cancel_invoice'); ?></span>
+				
+			<?php echo form_close(); ?>
 		</div>
-    	</form>
-    	</div>
-		<?php
-		}
-		?>
 
-
-	</div>
-
-	<?php
-	}
-	?>
+	<?php endif ?>
 </div>
+
 <div class="clearfix" style="margin-bottom:30px;">&nbsp;</div>
 
 
@@ -154,7 +139,7 @@ if(count($prescriptions)==0)
 <script type="text/javascript" language="javascript">
 $(document).ready(function()
 {
-    $("#item").autocomplete('<?php echo site_url("invoices/item_search"); ?>',
+    $("#item").autocomplete('<?php echo site_url("prescribe/item_search"); ?>',
     {
     	minChars:0,
     	max:100,

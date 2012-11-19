@@ -78,4 +78,10 @@ $lang['dispense_unsuspend_and_delete'] = 'Unsuspend and Delete';
 $lang['dispense_unsuspend'] = 'Unsuspend';
 $lang['dispense_successfully_suspended_prescription'] = 'Your prescription has been successfully suspended';
 $lang['dispense_email_receipt'] = 'E-Mail Receipt';
+$lang['Dispense_Module'] = 'Dispense';
+$lang['dispense_date'] = 'Date';
+$lang['dispense_drug'] = 'Drug';
+$lang['dispense_dosage'] = 'Dosage(Tablets/ Bottles)';
+$lang['dispense_frequency'] = 'Frequency';
+$lang['dispense_duration'] = 'Duration';
 ?>

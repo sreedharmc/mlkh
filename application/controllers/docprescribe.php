@@ -16,7 +16,7 @@ class Docprescribe extends Secure_area {
 
 	function item_search()
 	{
-		$suggestions = $this->Item->get_item_search_suggestions($this->input->post('q'),$this->input->post('limit'));
+		$suggestions = $this->Prescribe_model->get_item_search_suggestions($this->input->post('q'),$this->input->post('limit'));
 		echo implode("\n",$suggestions);
 	}
 
@@ -52,65 +52,67 @@ class Docprescribe extends Secure_area {
 		$this->_reload();
 	}
 	
-	function add()
+	function select_item($item_id = 0)
 	{
 		$data=array();
-		$mode = $this->prescription_lib->get_mode();
-		$item_id_or_number_or_receipt = $this->input->post("item");
-		$quantity = $mode=="sale" ? 1:-1;
+		$item_id = $this->input->post("item");
+		//$this->load->model('item');
+		if(!$this->Item->exists($item_id))
+		{
+			//try to get item id given an item_number
+			//no this is useless, what exactly is being submitted????
+			$item_id = $this->Item->get_item_id($item_id);
 
-		if($this->prescription_lib->is_valid_receipt($item_id_or_number_or_receipt) && $mode=='return')
-		{
-			$this->prescription_lib->return_entire_invoice($item_id_or_number_or_receipt);
+			if(!$item_id)
+				return false;
+		}else{
+
+			$data['item'] = array(
+				'item_id'=>$item_id,
+				'name'=>$this->Item->get_info($item_id)->name,
+				'item_number'=>$this->Item->get_info($item_id)->item_number,
+				);
+			
+
+			// $data['error']=$this->lang->line('invoices_unable_to_add_item');
+			// $data['warning'] = $this->lang->line('invoices_quantity_less_than_zero');
+
+			$this->_reload($data);
 		}
-		elseif(!$this->prescription_lib->add_item($item_id_or_number_or_receipt,$quantity))
+	}
+	function add_prescription()
+	{
+		$invoice_data = array(
+			'invoice_time' => date('Y-m-d H:i:s'),
+			'customer_id' =>  $this->prescription_lib->get_customer(),
+			'employee_id' => $this->Employee->get_logged_in_employee_info()->person_id,
+			'comment' => 'None',
+			'amount' => 0,
+			'processed' => 0
+			);
+		//print_r($invoice_data);
+		$invoice_item_data = array(
+			'item_id' =>$this->input->post('item_id'),
+			'description' => "",
+			'serialnumber' =>"",
+			'line' => 1,
+			'quantity_purchased' => 0.00,
+			'item_cost_price' => 0.00,
+			'item_unit_price' => 0.00,
+			'discount_percent' => 0,
+			'route_of_adm' => $this->input->post('roa'),
+			'frequency' => $this->input->post('frequency'),
+			'dosage' => $this->input->post('dosage'),
+			'duration' => $this->input->post('duration')
+			);
+		$data['invoice_id'] = $this->Prescribe_model->save_prescription($invoice_data, $invoice_item_data);
+		if ($data['invoice_id'] == 'Invoice -1')
 		{
-			$data['error']=$this->lang->line('invoices_unable_to_add_item');
-		}
-		
-		if($this->prescription_lib->out_of_stock($item_id_or_number_or_receipt))
-		{
-			$data['warning'] = $this->lang->line('invoices_quantity_less_than_zero');
+			$data['error_message'] = $this->lang->line('invoices_transaction_failed');
+		}else{
+			$data['success'] = $this->lang->line('prescription_added_succesfully');
 		}
 		$this->_reload($data);
-	}
-
-	function edit_item($line)
-	{
-		$data= array();
-
-		//$this->form_validation->set_rules('price', 'lang:items_price', 'required|numeric');
-		//$this->form_validation->set_rules('quantity', 'lang:items_quantity', 'required|numeric');
-
-        $description = $this->input->post("description");
-        $serialnumber = $this->input->post("serialnumber");
-		$price = $this->input->post("price");
-		$quantity = $this->input->post("quantity");
-		$discount = $this->input->post("discount");
-
-
-		if ($this->form_validation->run() != FALSE)
-		{
-			$this->prescription_lib->edit_item($line,$description,$serialnumber,$quantity,$discount,$price);
-		}
-		else
-		{
-			$data['error']=$this->lang->line('invoices_error_editing_item');
-		}
-		
-		if($this->prescription_lib->out_of_stock($this->prescription_lib->get_item_id($line)))
-		{
-			$data['warning'] = $this->lang->line('invoices_quantity_less_than_zero');
-		}
-
-
-		$this->_reload($data);
-	}
-
-	function delete_item($item_number)
-	{
-		$this->prescription_lib->delete_item($item_number);
-		$this->_reload();
 	}
 
 	function remove_customer()
@@ -155,7 +157,7 @@ class Docprescribe extends Secure_area {
 	{
 		$invoice_info = $this->Invoice->get_invoice($invoice_id)->row_array();
 		$this->prescription_lib->copy_entire_invoice($invoice_id);
-		$data['cart']=$this->prescription_lib->get_cart();
+		//$data['cart']=$this->prescription_lib->get_cart();
 		$data['subtotal']=$this->prescription_lib->get_subtotal();
 		$data['total']=$this->prescription_lib->get_total();
 		$data['receipt_title']=$this->lang->line('invoices_receipt');
@@ -179,7 +181,7 @@ class Docprescribe extends Secure_area {
 	function _reload($data=array())
 	{
 		$person_info = $this->Employee->get_logged_in_employee_info();
-		$data['cart']=$this->prescription_lib->get_cart();
+		//$data['cart']=$this->prescription_lib->get_cart();
 		//print_r($data['cart']);
 		$data['modes']=array('sale'=>$this->lang->line('invoices_invoice'),'return'=>$this->lang->line('invoices_return'));
 		$data['mode']=$this->prescription_lib->get_mode();
@@ -192,6 +194,7 @@ class Docprescribe extends Secure_area {
 		$data['amount_due']=$this->prescription_lib->get_amount_due();
 
 		$customer_id=$this->prescription_lib->get_customer();
+		$data['prescriptions'] = $this->Prescribe_model->get_prescriptions_for_customer($customer_id);
 		if($customer_id!=-1)
 		{
 			$info=$this->Customer->get_info($customer_id);
