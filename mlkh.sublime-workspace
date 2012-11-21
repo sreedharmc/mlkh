@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"prescr",
+				"prescribe"
+			],
+			[
+				"F",
+				"FALSE"
+			],
+			[
+				"get_re",
+				"get_real_quantity"
+			],
+			[
+				"siu",
+				"si_unit"
+			],
+			[
+				"si",
+				"SI_UNIT"
+			],
+			[
+				"str",
+				"stripos"
+			],
+			[
 				"upda",
 				"updateItems"
 			],
@@ -490,30 +514,6 @@
 			[
 				"Desc",
 				"DESC"
-			],
-			[
-				"De",
-				"DESC"
-			],
-			[
-				"while",
-				"while	while …"
-			],
-			[
-				"vi",
-				"visible"
-			],
-			[
-				"whi",
-				"while	while …"
-			],
-			[
-				"text",
-				"text-decoration"
-			],
-			[
-				"er",
-				"error"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "application/models/prescribe_model.php",
 			"settings":
 			{
-				"buffer_size": 5633,
+				"buffer_size": 6513,
 				"line_ending": "Windows"
 			}
 		},
@@ -540,6 +540,22 @@
 			"settings":
 			{
 				"buffer_size": 7746,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/models/item.php",
+			"settings":
+			{
+				"buffer_size": 6800,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/views/sales/register.php",
+			"settings":
+			{
+				"buffer_size": 12449,
 				"line_ending": "Windows"
 			}
 		}
@@ -724,16 +740,21 @@
 	},
 	"file_history":
 	[
+		"/C/Users/brian/Documents/themeforest.md",
+		"/C/Users/brian/Downloads/mlkh/mlkh_prescription_history.sql",
+		"/C/Users/brian/Documents/Sites/mlkh/application/views/dispense/dispense_view.php",
+		"/C/Users/brian/Documents/Sites/mlkh/application/language/english/prescription_lang.php",
+		"/C/Users/brian/Documents/Sites/mlkh/application/models/dispensing_model.php",
+		"/C/Users/brian/Documents/Sites/mlkh/application/language/english/dispense_lang.php",
+		"/C/Users/brian/Documents/Sites/mlkh/application/language/english/dispensing_lang.php",
+		"/C/Users/brian/Documents/Sites/mlkh/application/views/dispensing/dispensing_view.php",
+		"/C/Users/brian/Documents/Sites/mlkh/application/controllers/dispense.php",
 		"/C/Users/brian/Documents/Sites/mlkh/application/views/invoices/register.php",
 		"/C/Users/brian/Documents/Sites/mlkh/application/libraries/Prescribe_lib.php",
 		"/C/Users/brian/Documents/Sites/mlkh/application/controllers/invoices.php",
-		"/C/Users/brian/Documents/Sites/mlkh/application/views/dispense/dispense_view.php",
 		"/C/Users/brian/Documents/Sites/mlkh/index.php",
-		"/C/Users/brian/Documents/Sites/mlkh/application/controllers/dispense.php",
-		"/C/Users/brian/Documents/Sites/mlkh/application/language/english/dispense_lang.php",
 		"/C/Users/brian/Documents/Sites/mlkh/application/libraries/Invoice_lib.php",
 		"/C/Users/brian/Documents/Sites/mlkh/application/models/inventory.php",
-		"/C/Users/brian/Documents/Sites/mlkh/application/language/english/prescription_lang.php",
 		"/C/Users/brian/Documents/Sites/mlkh/mlkh.sublime-project",
 		"/C/Users/brian/Documents/Sites/mlkh/application/models/item.php",
 		"/C/Users/brian/Downloads/mlkh/vi_mlkh (1).sql",
@@ -846,12 +867,7 @@
 		"/home/brian/web.local/IS/application/models/patient.php",
 		"/home/brian/web.local/IS/application/models/user.php",
 		"/home/brian/web.local/IS/application/config/database.php",
-		"/home/brian/web.local/IS/ISProject.sublime-project",
-		"/home/brian/web.local/IS/application/config/config.php",
-		"/home/brian/web.local/IS/application/controllers/welcome.php",
-		"/home/brian/web.local/IS/application/views/home.php",
-		"/home/brian/web.local/IS/application/views/welcome_message.php",
-		"/home/brian/web.local/IS/application/config/routes.php"
+		"/home/brian/web.local/IS/ISProject.sublime-project"
 	],
 	"find":
 	{
@@ -922,7 +938,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -930,15 +946,15 @@
 					"file": "application/models/prescribe_model.php",
 					"settings":
 					{
-						"buffer_size": 5633,
+						"buffer_size": 6513,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2907,
-								2907
+								6251,
+								6251
 							]
 						],
 						"settings":
@@ -1036,7 +1052,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1158.0,
+						"translation.y": 3270.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1053,8 +1069,8 @@
 						"selection":
 						[
 							[
-								6402,
-								6402
+								6052,
+								6052
 							]
 						],
 						"settings":
@@ -1152,7 +1168,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3135.0,
+						"translation.y": 3276.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1284,6 +1300,250 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "application/models/item.php",
+					"settings":
+					{
+						"buffer_size": 6800,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2420,
+								2420
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"is_xml": false,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2053.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "application/views/sales/register.php",
+					"settings":
+					{
+						"buffer_size": 12449,
+						"regions":
+						{
+							"TagLint":
+							{
+								"flags": 52,
+								"icon": "dot",
+								"regions":
+								[
+									[
+										1679,
+										1695
+									]
+								],
+								"scope": "variable.parameter"
+							}
+						},
+						"selection":
+						[
+							[
+								3391,
+								3391
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"is_xml": false,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1657.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
 				}
 			]
 		}
@@ -1348,6 +1608,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 129.0,
+	"side_bar_width": 204.0,
 	"status_bar_visible": true
 }

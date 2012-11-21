@@ -26,6 +26,7 @@ if (isset($success))
 			<th style="width:15%;"><?php echo $this->lang->line('dispense_dosage'); ?></th>
 			<th style="width:15%;"><?php echo $this->lang->line('dispense_frequency'); ?></th>
 			<th style="width:15%;"><?php echo $this->lang->line('dispense_duration'); ?></th>
+			<th style="width:15%;"><?php echo $this->lang->line('dispense_quantity'); ?></th>
 		</tr>
 	</thead>
 <?php if (isset($customer)): ?>
@@ -37,12 +38,56 @@ if (isset($success))
 			<td><?php echo $history->dosage; ?></td>
 			<td><?php echo $history->frequency; ?></td>
 			<td><?php echo $history->duration; ?></td>
+			<td><?php echo $history->quantity; ?></td>
 		</tr>
 		<?php endforeach ?>
 	</tbody>
 <?php endif ?>
 </table>
+<!-- ////////////////////////////History table herer //////////////////// -->
+<table>
+	<caption>Drug History</caption>
+<thead>
+<tr>
+	<th style="width:10%;"><?php echo $this->lang->line('prescription_date'); ?></th>
+	<th style="width:10%;"><?php echo $this->lang->line('presctiption_item_name'); ?></th>
+	<th style="width:10%;"><?php echo $this->lang->line('prescription_dosage'); ?></th>
+	<th style="width:15%;"><?php echo $this->lang->line('prescription_frequency'); ?></th>
+	<th style="width:15%;"><?php echo $this->lang->line('prescription_duration'); ?></th>
+	<th style="width:15%;"><?php echo $this->lang->line('prescription_quantity'); ?></th>
 
+</tr>
+</thead>
+<tbody>
+	<?php
+if(count($prescriptions)==0)
+{
+?>
+<tr>
+	<td colspan='8'>
+		<div class='warning_message' style='padding:7px;'><?php echo $this->lang->line('no_prescriptions_for_patient'); ?></div>
+	</td>
+</tr>
+<?php
+}
+//else
+{
+?>
+	<?php foreach ($prescriptions as $prescription): ?>
+		<tr>
+			<td><?php echo $prescription->invoice_time; ?></td>
+			<td><?php echo $prescription->name; ?></td>
+			<td><?php echo $prescription->dosage; ?></td>
+			<td><?php echo $prescription->frequency; ?></td>
+			<td><?php echo $prescription->duration; ?></td>
+			<td><?php echo $prescription->quantity; ?></td>
+		</tr>
+	<?php endforeach ?>
+<?php
+}
+?>
+</tbody>
+</table>
 </div>
 <div id="overall_sale">
 	<?php

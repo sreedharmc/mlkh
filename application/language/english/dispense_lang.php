@@ -84,4 +84,5 @@ $lang['dispense_drug'] = 'Drug';
 $lang['dispense_dosage'] = 'Dosage(Tablets/ Bottles)';
 $lang['dispense_frequency'] = 'Frequency';
 $lang['dispense_duration'] = 'Duration';
+$lang['dispense_quantity'] = 'Quantity to Dispense';
 ?>

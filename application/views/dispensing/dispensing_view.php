@@ -17,19 +17,15 @@ if (isset($success))
 }
 ?>
 <div id="register_wrapper">
-<table id="register">
+<table>
+	<caption>Drug History</caption>
 <thead>
 <tr>
 	<th style="width:10%;"><?php echo $this->lang->line('prescription_date'); ?></th>
 	<th style="width:10%;"><?php echo $this->lang->line('presctiption_item_name'); ?></th>
 	<th style="width:10%;"><?php echo $this->lang->line('prescription_dosage'); ?></th>
-	<th style="width:10%;"><?php echo $this->lang->line('prescription_route_of_admin'); ?></th>
 	<th style="width:15%;"><?php echo $this->lang->line('prescription_frequency'); ?></th>
 	<th style="width:15%;"><?php echo $this->lang->line('prescription_duration'); ?></th>
-	<th style="width:10%;"><?php echo $this->lang->line('dispensing_category'); ?></th>
-	<th style="width:15%;"><?php echo $this->lang->line('prescription_quantity'); ?></th>
-	<th style="width:15%;"><?php echo $this->lang->line('dispensing_unit_price'); ?></th>
-	<th style="width:15%;"><?php echo $this->lang->line('dispensing_total'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -50,15 +46,10 @@ if(count($prescriptions)==0)
 	<?php foreach ($prescriptions as $prescription): ?>
 		<tr>
 			<td><?php echo $prescription->invoice_time; ?></td>
-			<td><?php echo $prescription->item_id; ?></td>
+			<td><?php echo $prescription->name; ?></td>
 			<td><?php echo $prescription->dosage; ?></td>
-			<td><?php echo $prescription->route_of_adm; ?></td>
 			<td><?php echo $prescription->frequency; ?></td>
 			<td><?php echo $prescription->duration; ?></td>
-			<td><?php echo 'Category'?></td>
-			<td><?php echo form_input(array('name'=> 'qty', 'value' => $prescription->quantity_purchased, 'size'=>'5')); ?></td>
-			<td><?php echo $prescription->item_unit_price; ?></td>
-			<td><?php echo $prescription->amount; ?></td>
 		</tr>
 	<?php endforeach ?>
 <?php

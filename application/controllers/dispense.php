@@ -65,9 +65,9 @@ class Dispense extends Secure_area {
 		$person_info = $this->Employee->get_logged_in_employee_info();
 		$data['items_module_allowed'] = $this->Employee->has_permission('items', $person_info->person_id);
 		$customer_id=$this->prescription_lib->get_customer();
-		$data['histories'] = $this->Prescribe_model->get_prescriptions_for_customer($customer_id);
+		$data['histories'] = $this->Dispensing_model->get_prescriptions_for_customer($customer_id);
 		//need to get customer data about prescriptions
-		//$data['prescriptions'] = $this->Prescribe_model->get_prescriptions_for_customer($customer_id);
+		$data['prescriptions'] = $this->Dispensing_model->get_customer_history($customer_id);
 		if($customer_id!=-1)
 		{
 			$info=$this->Customer->get_info($customer_id);

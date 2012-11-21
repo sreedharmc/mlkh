@@ -50,6 +50,7 @@ class Prescribe_model extends Invoice {
 		$this->db->trans_complete();
 		//loop through the recieved array and save each item in array to db
 		foreach ($cart as $cart_item) {
+			$quantity = $this->get_real_quantity($cart_item['item_id'], $cart_item['dosage']);
 			if ($invoice_id) {
 				$invoices_items = array(
 				'invoice_id' => $invoice_id,
@@ -57,7 +58,7 @@ class Prescribe_model extends Invoice {
 				'description' => "",
 				'serialnumber' =>"",
 				'line' => 1,
-				'quantity_purchased' => $cart_item['dosage'],
+				'quantity_purchased' => $quantity,
 				'item_cost_price' => 0.00,
 				'item_unit_price' => 0.00,
 				'discount_percent' => 0,
@@ -69,7 +70,7 @@ class Prescribe_model extends Invoice {
 				$this->db->trans_start();
 				$this->db->insert('invoices_items',$invoices_items);
 				$this->db->trans_complete();
-				// $this->updateItems($cart_item['item_id'], $quantity);
+				$this->updateItems($cart_item['item_id'], $quantity);
 			}
 		}
 
@@ -81,24 +82,46 @@ class Prescribe_model extends Invoice {
 	}
 	function get_real_quantity($item_id, $dosage)
 	{
-		$SI_UNIT= $this->Item->get_info($item_id)->si_unit;
+		$si_unit= $this->Item->get_info($item_id)->si_unit;
 		$name = $this->Item->get_info($item_id)->name;
+		if (stripos($name, 'ml')) {
+			if ($si_unit == 0) {
+				$si_unit = 60.0;
+			}
+			return ceil($dosage/$si_unit);
+		}else{
+			return $dosage;
+		}
+		
 		/*
-		$position = stripos($name, )
+		$position = stripos($name, 'ml')
 		if ($pos2 !== false) {
 		    echo "We found '$findme' in '$mystring2' at position $pos2";
 		}
 		*/
-		// if (stripos($name, 'AMP')) {
+		// if (stripos($name, 'AMP', 'Vial',' Bottles', 'Tube', 'Syrup')) {
 		// 	//harcoded values ama? 
 		// }
 		// $prescribe_status = $this->Item->get_info($item_id)->prescribe_status;
 	}
 
-	function updateItems($item_id)
+	function updateItems($item_id, $current_quantity)
 	{
 		//setup quantity purchased here
 		////deduct from item quantity here
+		$quantity_in_stock=$this->Item->get_info($item_id)->quantity;
+		$new_quantity = $quantity_in_stock - $current_quantity;
+		$item_data = array('quantity' => $new_quantity);
+		//$new_result = $this->Item->save($item_data, $item_id);
+		$this->db->where('item_id', $item_id);
+		///this will only update if prescribe status is 1
+		$this->db->where('prescribe_status', 1);
+		$result = $this->db->update('items',$item_data);
+		if ($this->db->affected_rows() > 0) {
+			return TRUE;
+		}else{
+			return FALSE;
+		}
 	}
 	public function update_prescription_items($invoice_item_data)
 	{
@@ -116,7 +139,7 @@ class Prescribe_model extends Invoice {
 	{
 		$this->db->where('customer_id', $customer_id);
 		$this->db->order_by("invoice_time", "desc"); 
-		// $this->db->where('processed', 1);
+		// $this->db->where('processed', 1);//check this in prescribe model to show most relevant
 		$q = $this->db->get('prescription_history');
 		if ($q->num_rows() > 0) {
 			foreach ($q->result() as $row) {
@@ -163,6 +186,7 @@ class Prescribe_model extends Invoice {
 		$this->db->from('items');
 		$this->db->where('category', 'pharm');
 		$this->db->where('deleted',0);
+		$this->db->where('unit_price !=',0.00);
 		$this->db->like('name', $search);
 		$this->db->order_by("name", "asc");
 		$by_name = $this->db->get();

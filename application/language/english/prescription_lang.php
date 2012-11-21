@@ -15,4 +15,6 @@ $lang['prescription_date'] = "Date Prescribed";
 $lang['prescription_quantity'] = "Quantity";
 $lang['prescription_staff'] = "Staff";
 $lang['prescription_add'] = "add";
+$lang['prescription_quantity'] = 'Quantity Dispensed';
+
 ?>

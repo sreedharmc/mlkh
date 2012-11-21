@@ -53,7 +53,8 @@ else
 <th style="width:10%;"></th>
 </tr>
 </thead>
-<tbody id="cart_contents">
+<?php if (isset($customer)): ?>
+	<tbody id="cart_contents">
 <?php
 if(count($cart)==0)
 {
@@ -125,6 +126,7 @@ else
 }
 ?>
 </tbody>
+<?php endif ?>
 </table>
 </div>
 
