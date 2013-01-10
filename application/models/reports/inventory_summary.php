@@ -9,7 +9,12 @@ class Inventory_summary extends Report
 	
 	public function getDataColumns()
 	{
-		return array($this->lang->line('reports_item_name'), $this->lang->line('reports_item_number'), $this->lang->line('reports_description'), $this->lang->line('reports_count'));
+		return array(
+			$this->lang->line('reports_item_name'), 
+			$this->lang->line('reports_item_number'), 
+			$this->lang->line('reports_description'), 
+			$this->lang->line('reports_count')
+			);
 	}
 	
 	public function getData(array $inputs)

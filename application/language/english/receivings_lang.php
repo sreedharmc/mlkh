@@ -23,4 +23,12 @@ $lang['recvs_find_or_scan_item_or_receipt']='Find/Scan Item OR Receipt';
 $lang['recvs_id']='Receiving ID';
 $lang['recvs_item_name'] = 'Item Name';
 $lang['receivings_transaction_failed'] = 'Receivings Transactions Failed';
+
+/*/////////g code ////////*/
+$lang['recvs_issuing'] = 'Issuing';
+$lang['recvs_employee'] = 'Employees';
+$lang['recvs_select_employee'] = 'Select Employee';
+$lang['recvs_start_typing_employee_name'] = 'Start Typing Employee\'s name ..';
+$lang['recvs_common_delete'] = 'Delete';
+$lang['recvs_employee_employee'] = "Employee";
 ?>

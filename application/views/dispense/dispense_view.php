@@ -119,6 +119,17 @@ if(count($prescriptions)==0)
 		<div class="float_left" style="width:45%;font-weight:bold;"><?php echo $civil_status; ?></div>
 	</div>
 	<?php endif ?>
+	<?php if (isset($histories)): ?>
+		<div class="finish_sale">
+			<?php echo form_open("dispense/complete",array('id'=>'finish_invoice_form')); ?>
+			<?php
+				echo "<div class='small_button' id='finish_sale_button' style='float:left;margin-top:5px;'><span>".$this->lang->line('dispense_complete_prescription')."</span></div>";
+				?>
+				
+			<?php echo form_close(); ?>
+		</div>
+
+	<?php endif ?>
 </div>
 <div class="clearfix" style="margin-bottom:30px;">&nbsp;</div>
 
@@ -151,6 +162,14 @@ $(document).ready(function()
     $('#customer').blur(function()
     {
     	$(this).attr('value',"<?php echo $this->lang->line('invoices_start_typing_customer_name'); ?>");
+    });
+
+    $("#finish_sale_button").click(function()
+    {
+    	if (confirm('<?php echo $this->lang->line("dispense_confirm_finish_prescription"); ?>'))
+    	{
+    		$('#finish_invoice_form').submit();
+    	}
     });
 	
 });

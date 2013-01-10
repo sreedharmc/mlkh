@@ -52,5 +52,6 @@ if(isset($error))
 <script type="text/javascript" language="javascript">
 $(document).ready(function()
 {
+	
 });
 </script>

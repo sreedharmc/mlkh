@@ -29,6 +29,39 @@ class Dispensing_model extends CI_Model {
 			return $data ;
 		}
 	}
+	public function get_invoice_id_by_customer_id($customer_id ='-1')
+	{
+		if ($customer_id == '-1') {
+			return FALSE;
+		}else{
+			$this->db->where('customer_id', $current_id);
+			$this->db->where('processed', 1);
+			$q = $this->db->get('invoices');
+			if ($q->num_rows() > 0)
+			{
+			   $row = $query->row(); 
+
+			   return $row->invoice_id;
+			}
+		}
+	}
+	public function update_prescription_invoice($invoice_data, $customer_id = '-1')
+	{
+		if ($customer_id == '-1' || FALSE) {
+			return FALSE;
+		}else{
+			$this->db->trans_start();
+			$this->db->where('customer_id', $customer_id);
+			$this->db->where('processed', 1);
+			$this->db->update('invoices', $invoice_data); 
+			$this->db->trans_complete();
+			if ($this->db->affected_rows() > 0) {
+				return TRUE;
+			}else{
+				return FALSE;
+			}
+		}
+	}
 
 }
 

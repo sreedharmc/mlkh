@@ -80,96 +80,7 @@ class Prescribe extends Secure_area {
 			$this->_reload($data);
 		}
 	}
-	// function add_prescription()
-	// {
-	// 	if ($this->input->post('invoice_id')) {
-	// 		////////////////////////
-	// 		$dosage = $this->input->post('number') * $this->input->post('frequency') * $this->input->post('duration');
-	// 		$invoice_item_data = array(
-	// 			'invoice_id' => $this->input->post('invoice_id'),
-	// 			'item_id' =>$this->input->post('item_id'),
-	// 			'description' => "",
-	// 			'serialnumber' =>"",
-	// 			'line' => 1,
-	// 			'quantity_purchased' => $dosage,
-	// 			'item_cost_price' => 0.00,
-	// 			'item_unit_price' => 0.00,
-	// 			'discount_percent' => 0,
-	// 			//'route_of_adm' => $this->input->post('roa'),
-	// 			'frequency' => $this->input->post('frequency'),
-	// 			'dosage' => $dosage,
-	// 			'duration' => $this->input->post('duration')
-	// 		);
 
-	// 		$result = $this->Prescribe_model->update_prescription_items($invoice_item_data);
-	// 		$data['invoice_id'] = $this->input->post('invoice_id');
-	// 		if (!$result)
-	// 		{
-	// 			$data['error_message'] = $this->lang->line('invoices_transaction_failed');
-	// 		}else{
-	// 			$quantity_in_stock=$this->Item->get_info($this->input->post('item_id'))->quantity;
-	// 			$new_quantity = $quantity_in_stock - $dosage;
-	// 			$item_data = array('quantity' => $new_quantity);
-	// 			$new_result = $this->Item->save($item_data, $this->input->post('item_id'));
-	// 			if ($new_result) {
-	// 				$data['success'] = $this->lang->line('prescription_added_succesfully');
-	// 			}else{
-	// 				$data['error_message'] = $this->lang->line('invoices_transaction_failed');
-
-	// 			}
-				
-	// 		}
-	// 		$this->_reload($data);
-	// 		/////////////////////////
-	// 		// echo "test";
-	// 	} else{
-	// 		///////////////
-	// 			$invoice_data = array(
-	// 			'invoice_time' => date('Y-m-d H:i:s'),
-	// 			'customer_id' =>  $this->prescription_lib->get_customer(),
-	// 			'employee_id' => $this->Employee->get_logged_in_employee_info()->person_id,
-	// 			'comment' => 'None',
-	// 			'amount' => 0,
-	// 			'processed' => 0
-	// 			);
-	// 		//print_r($invoice_data);
-	// 		$dosage = $this->input->post('number') * $this->input->post('frequency') * $this->input->post('duration');
-	// 		$invoice_item_data = array(
-	// 			'item_id' =>$this->input->post('item_id'),
-	// 			'description' => "",
-	// 			'serialnumber' =>"",
-	// 			'line' => 1,
-	// 			'quantity_purchased' => $dosage,
-	// 			'item_cost_price' => 0.00,
-	// 			'item_unit_price' => 0.00,
-	// 			'discount_percent' => 0,
-	// 			//'route_of_adm' => $this->input->post('roa'),
-	// 			'frequency' => $this->input->post('frequency'),
-	// 			'dosage' => $dosage,
-	// 			'duration' => $this->input->post('duration')
-	// 			);
-	// 		$data['invoice_id'] = $this->Prescribe_model->save_prescription($invoice_data, $invoice_item_data);
-	// 		if ($data['invoice_id'] == 'Invoice -1')
-	// 		{
-	// 			$data['error_message'] = $this->lang->line('invoices_transaction_failed');
-	// 		}else{
-	// 			$quantity_in_stock=$this->Item->get_info($this->input->post('item_id'))->quantity;
-	// 			$new_quantity = $quantity_in_stock - $dosage;
-	// 			$item_data = array('quantity' => $new_quantity);
-	// 			$new_result = $this->Item->save($item_data, $this->input->post('item_id'));
-	// 			if ($new_result) {
-	// 				$data['success'] = $this->lang->line('prescription_added_succesfully');
-	// 			}else{
-	// 				$data['error_message'] = $this->lang->line('invoices_transaction_failed');
-
-	// 			}
-	// 			// $data['success'] = $this->lang->line('prescription_added_succesfully');
-	// 		}
-	// 		$this->_reload($data);
-	// 			///////////////
-	// 	}
-		
-	// }
 	function add()
 	{
 		$data = array();
@@ -233,7 +144,7 @@ class Prescribe extends Secure_area {
 				'employee_id' => $this->Employee->get_logged_in_employee_info()->person_id,
 				'comment' => 'None',
 				'amount' => 0,
-				'processed' => 0
+				'processed' => 1
 			);
 			//save values to db and take care of the pre processing of items
 			//unset all values from session and allow new one to start and reload page

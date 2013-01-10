@@ -173,6 +173,7 @@ $(document).ready(function()
     	delay:10,
     	max:100,
     	formatItem: function(row) {
+    		// console.log(row);
 			return row[1];
 		}
     });

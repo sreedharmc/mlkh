@@ -34,6 +34,23 @@ class Receiving_lib
 		$this->CI->session->set_userdata('supplier',$supplier_id);
 	}
 
+	////////g code /////////
+	/////////this two set the emp that recieve and are issued to stock
+	function get_recieving_employee()
+	{
+		if(!$this->CI->session->userdata('recieving_employee')){
+			$this->set_recieving_employee(-1);
+		}
+
+		return $this->CI->session->userdata('recieving_employee');
+	}
+
+	function set_recieving_employee($employee_id)
+	{
+		$this->CI->session->set_userdata('recieving_employee',$employee_id);
+	}
+	///////////////////end g code ///////////
+
 	function get_mode()
 	{
 		if(!$this->CI->session->userdata('recv_mode'))
@@ -47,7 +64,7 @@ class Receiving_lib
 		$this->CI->session->set_userdata('recv_mode',$mode);
 	}
 
-	function add_item($item_id,$quantity=1,$discount=0,$price=null,$description=null,$serialnumber=null)
+	function add_item($item_id,$quantity=1,$discount=0,$price=0,$description=null,$serialnumber=null)
 	{
 		//make sure item exists in database.
 		if(!$this->CI->Item->exists($item_id))
@@ -105,7 +122,7 @@ class Receiving_lib
 			'is_serialized'=>$this->CI->Item->get_info($item_id)->is_serialized,
 			'quantity'=>$quantity,
             'discount'=>$discount,
-			'price'=>$price!=null ? $price: $this->CI->Item->get_info($item_id)->cost_price
+			'price'=>$price!=0 ? $price: $this->CI->Item->get_info($item_id)->cost_price
 			)
 		);
 
@@ -125,19 +142,21 @@ class Receiving_lib
 
 	}
 
-	function edit_item($line,$description,$serialnumber,$quantity,$discount,$price)
+	function edit_item($line,$description,$serialnumber,$quantity,$discount=0,$price=0)
 	{
 		$items = $this->get_cart();
 		if(isset($items[$line]))
 		{
-			$items[$line]['description'] = $description;
-			$items[$line]['serialnumber'] = $serialnumber;
+			//$items[$line]['description'] = $description;
+			//$items[$line]['serialnumber'] = $serialnumber;
 			$items[$line]['quantity'] = $quantity;
-			$items[$line]['discount'] = $discount;
-			$items[$line]['price'] = $price;
+			//$items[$line]['discount'] = $discount;
+			//$items[$line]['price'] = $price;	
 			$this->set_cart($items);
+			
 		}
-
+		//var_dump($items);
+			//exit();
 		return false;
 	}
 
@@ -224,7 +243,12 @@ class Receiving_lib
 	{
 		$this->CI->session->unset_userdata('supplier');
 	}
-
+	//////////////g code /////////
+	function delete_recieving_employee()
+	{
+		$this->CI->session->unset_userdata('recieving_employee');
+	}
+	////////////end  g code //////////
 	function clear_mode()
 	{
 		$this->CI->session->unset_userdata('receiving_mode');

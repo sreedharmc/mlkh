@@ -59,6 +59,21 @@ class Dispense extends Secure_area {
 		$this->_reload();
 	}
 
+	function complete()
+	{
+		$customer_id=$this->prescription_lib->get_customer();
+		// $invoice_id = $this->Dispensing_model->get_invoice_id_by_customer_id($customer_id);
+		$invoice_data = array('processed' => 2);
+		$result = $this->Dispensing_model->update_prescription_invoice($invoice_data, $customer_id);
+			if ($result = TRUE) {
+					$data['success'] = $this->lang->line('dispense_invoice_successfully');
+				}else{
+					$data['error_message'] = $this->lang->line('dispense_invoice_failed');
+
+				}
+		$this->_reload($data);
+	}
+
 
 	function _reload($data=array())
 	{
@@ -66,7 +81,7 @@ class Dispense extends Secure_area {
 		$data['items_module_allowed'] = $this->Employee->has_permission('items', $person_info->person_id);
 		$customer_id=$this->prescription_lib->get_customer();
 		$data['histories'] = $this->Dispensing_model->get_prescriptions_for_customer($customer_id);
-		//need to get customer data about prescriptions
+		//need to get customer data about prescriptions history
 		$data['prescriptions'] = $this->Dispensing_model->get_customer_history($customer_id);
 		if($customer_id!=-1)
 		{

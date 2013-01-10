@@ -53,7 +53,7 @@ $autoload['packages'] = array();
 */
 
 $autoload['libraries'] = array('database','form_validation','session','user_agent', 'pagination',
- 'invoice_lib', 'Prescription_lib');
+ 'invoice_lib', 'Prescription_lib', 'Sale_lib', 'Receiving_lib');
 
 
 /*

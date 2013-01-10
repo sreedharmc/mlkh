@@ -1,46 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Prescribe_model extends Invoice {
-	public function save_prescription($invoice_data, $invoice_item_data)
-	{
-		$this->db->trans_start();
-		// if ($this->already_invoiced($invoice_data['customer_id'])){
-		// 	$invoice_id = $this->already_invoiced($invoice_data['customer_id']);
-		// 	$this->update($invoice_data, $invoice_id);
-			
-		// 	$this->db->where('invoice_id', $invoice_id);
-		// 	$this->db->delete("invoices_items");
-		// }else{
-			$this->db->insert('invoices',$invoice_data);
-	    	$invoice_id = $this->db->insert_id();
-		//}
-		$this->db->trans_complete();
-		if ($invoice_id) {
-			$invoices_items = array(
-			'invoice_id' => $invoice_id,
-			'item_id' =>$invoice_item_data['item_id'],
-			'description' => $invoice_item_data['description'],
-			'serialnumber' =>$invoice_item_data['serialnumber'],
-			'line' => $invoice_item_data['line'],
-			'quantity_purchased' => $invoice_item_data['quantity_purchased'],
-			'item_cost_price' => $invoice_item_data['item_cost_price'],
-			'item_unit_price' => $invoice_item_data['item_unit_price'],
-			'discount_percent' => $invoice_item_data['discount_percent'],
-			//'route_of_adm' => $invoice_item_data['route_of_adm'],
-			'frequency' => $invoice_item_data['frequency'],
-			'dosage' => $invoice_item_data['dosage'],
-			'duration' => $invoice_item_data['duration']
-				);
-			$this->db->trans_start();
-			$this->db->insert('invoices_items',$invoices_items);
-			$this->db->trans_complete();
-		}		
-		if ($this->db->trans_status() === FALSE)
-		{
-			return -1;
-		}
-		return $invoice_id;
-	}
+	
 	public function save_cart($invoice_data, $cart)
 	{
 		//save invoice data to get invoice id
@@ -51,6 +12,7 @@ class Prescribe_model extends Invoice {
 		//loop through the recieved array and save each item in array to db
 		foreach ($cart as $cart_item) {
 			$quantity = $this->get_real_quantity($cart_item['item_id'], $cart_item['dosage']);
+			$unit_price= $this->Item->get_info($cart_item['item_id'])->unit_price;
 			if ($invoice_id) {
 				$invoices_items = array(
 				'invoice_id' => $invoice_id,
@@ -60,7 +22,7 @@ class Prescribe_model extends Invoice {
 				'line' => 1,
 				'quantity_purchased' => $quantity,
 				'item_cost_price' => 0.00,
-				'item_unit_price' => 0.00,
+				'item_unit_price' => $unit_price,
 				'discount_percent' => 0,
 				//'route_of_adm' => $invoice_item_data['route_of_adm'],
 				'frequency' => $cart_item['frequency'],

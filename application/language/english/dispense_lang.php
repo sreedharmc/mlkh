@@ -85,4 +85,7 @@ $lang['dispense_dosage'] = 'Dosage(Tablets/ Bottles)';
 $lang['dispense_frequency'] = 'Frequency';
 $lang['dispense_duration'] = 'Duration';
 $lang['dispense_quantity'] = 'Quantity to Dispense';
+$lang['items dispensed'] = 'Prescription Dispensed successfully!';
+$lang['dispense_invoice_successfully'] = 'Dispensed prescription successfully!';
+$lang['dispense_invoice_failed'] = 'Dispense Transaction Failed!';
 ?>
